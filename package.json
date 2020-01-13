@@ -14,10 +14,14 @@
   "author": "Harry Chung",
   "license": "MIT",
   "dependencies": {
+    "actions-on-google": "^2.12.0",
     "cors": "^2.8.5",
     "dialogflow": "^1.1.1",
+    "dialogflow-fulfillment": "^0.6.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
     "helmet": "^3.21.2",
     "morgan": "^1.9.1",
     "uuid": "^3.3.3"

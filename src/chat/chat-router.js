@@ -9,11 +9,11 @@ chatRouter
     .get((req, res, next) => {
         res.send("hey its me")
     })
-    .post(async (req, res, next) => {
-        const ids = req.body
-        ChatService.getBlockSequence(req.app.get('db'), ids)
-            .then(blocks => {
-                return res.status(200).json(blocks)
+    .post(jsonBodyParser, (req, res, next) => {
+        console.log(req.body)
+        ChatService.sendMessage(req.body)
+            .then(response => {
+                return res.status(200).json(response)
             })
             .catch(next)
     })
